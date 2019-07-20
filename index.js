@@ -5,9 +5,24 @@ const morgan = require('morgan')
 
 
 const cors = require('cors')
-
 const persons = [
-];
+     {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": 2
+    },
+    {
+      "name": "Olavi Virta",
+      "number": "12-55-2222131",
+      "id": "Olavi Virta"
+    },
+    {
+      "name": "Teuvo Hakkarainen",
+      "number": "013-155-1233-111",
+      "id": "Teuvo Hakkarainen"
+    }
+  ];
+
 
 app.use(express.static('build'))
 
@@ -88,5 +103,5 @@ app.delete('/api/persons/:id', (request, response) => {
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+  console.log(`Server running on port ${PORT}`)
 })
