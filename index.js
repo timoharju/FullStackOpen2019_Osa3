@@ -6,6 +6,9 @@ const morgan = require('morgan')
 
 const cors = require('cors')
 
+const persons = [
+];
+
 app.use(express.static('build'))
 
 app.use(cors())
@@ -85,5 +88,5 @@ app.delete('/api/persons/:id', (request, response) => {
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+    console.log(`Server running on port ${PORT}`)
 })
